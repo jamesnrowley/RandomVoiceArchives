@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Single-Scroll Site</title>
-    <style>
-        body { margin: 0; padding: 0; } /* Removes default spacing */
-        svg { display: block; width: 100%; height: auto; } /* Makes SVG full-width and scrollable */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Random Voice Archives</title>
+
+ <!-- <link rel="android-chrome-big-icon" sizes="512x512" href="/androidchrome512x512.png"> -->
+ <!-- <link rel="android-chrome-small-icon" sizes="192x192" href="/androidchrome192x192.png"> -->
+ <!-- <link rel="apple-touch-icon" sizes="180x180" href="/appletouchicon.png"> -->
+ <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon32x32.png"> -->
+ <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon16x16.png"> -->
+ <!-- <link rel="icon" href="/favicon.ico"> -->
+  
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        
+        /* LAPTOP/DESKTOP SETTINGS */
+        
+        background-color: #f5a911; /* CHANGE THE WEBSITE BACKGROUND COLOR TO MATCH THE POSTER EDGE */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* FORCES THE CONTAINER TO BE EXACTLY THE SCREEN HEIGHT */
+        overflow: hidden; /* DISABLE SCROLLING */
+    }
+
+    /* PHONE SETTINGS */
+    /* THIS SECTION ONLY ACTIVATES ON SCREENS NARROWER THAN 768PX */
+    @media (max-width: 768px) {
+        body {
+            background-color: #f5a911; /* FORCES BLACK BACKGROUND ON PHONES */
+        }
+    }
+    
+    img {
+        max-width: 100%;
+        max-height: 100vh; /* THIS FIXES DISPLAY CONFORMITY FOR LAPTOPS */
+        width: auto;
+        height: auto;
+        display: block;
+        object-fit: contain; /* ENSURES THE WHOLE POSTER IS VISIBLE WITHOUT CROPPING */
+        box-shadow: 0 0 20px rgba(0,0,0,0.5); /* ADDS A SUBTLE SHADOW FOR DEPTH */
+    }
+  </style>
 </head>
 <body>
-    <object data="RVAStaticScrollSite.svg" type="image/svg+xml"></object>
+    <Picture>
+        <source media="(max-width: 768px)" srcset="RVAStaticScrollSite.svg">
+
+        <img src="RVAStaticScrollSite.svg" alt="Main Poster"
+    </Picture>
 </body>
 </html>
